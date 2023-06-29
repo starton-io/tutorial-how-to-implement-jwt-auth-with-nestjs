@@ -1,87 +1,78 @@
-## Description
+![Starton Banner](https://github.com/starton-io/.github/blob/master/github-banner.jpg?raw=true)
 
-This project is an example of how to create a JWT-based authentication system with NestJS.
+# Project title
+
+Tutorial - How to implement JWT authentication with NestJS
+
+## Requirements
+
+You will need :
+- [NodeJS](https://nodejs.org/en) (we recommend the use of [nvm](https://github.com/nvm-sh/nvm))
+- [NestJS CLI](https://nestjs.com/)
+- [NestJS JWT module](https://github.com/nestjs/jwt)
+- [Prisma client](https://www.prisma.io/)
+- [class-validator](https://www.npmjs.com/package/class-validator)
+- [class-transformer](https://www.npmjs.com/package/class-transformer)
+- [uuid](https://www.npmjs.com/package/uuid)
+- [cookie-parser](https://www.npmjs.com/package/cookie-parser)
 
 ## Installation
 
-```bash
-$ yarn install
-```
+To install the project, first clone the repository and go inside project directory, then :
 
-### Setting your .env fie
+- With [yarn](https://yarnpkg.com/) :
+    ```bash
+    $ yarn install
+    ```
 
-You need to create a `.env` file in the root of your project and add the following variables:
+- With [NPM](https://www.npmjs.com/) :
+    ```bash
+    $ npm install
+    ```
 
-```
-DATABASE_URL="DATABASE_CONNECTION_URL"
-JWT_SECRET=your_secret_here
+## Environment Variables
 
-```
+To run this project, you will need to add the following environment variables to your .env file.
 
-`DATABASE_URL` specifies the connection URL to connect to the database, and `JWT_SECRET` is the secret used to sign the JWTs. You can generate a strong secret by running the following command in your terminal:
+* `NODE_ENV` : is a system environment variable that Node exposes into running scripts
+* `DATABASE_URL` : is an environment variable that Prisma uses to connect to your database.
+* `JWT_SECRET` : A random string used to sign JWTs
 
-```bash
-node -e "console.log(require('crypto').randomBytes(256).toString('base64'));"
-```
+## Run Locally
 
-Once you have generated a strong secret, add it to your `.env` file as `JWT_SECRET`.
+Your project is now ready to be modified by you, for that you just have to launch the project via the command below:
 
-## Running the app
+- With [yarn](https://yarnpkg.com/) :
+    ```bash
+    $ yarn start:dev
+    ```
 
-```bash
-# development
-$ yarn run start
+- With [NPM](https://www.npmjs.com/) :
+    ```bash
+    $ npm run start:dev
+    ```
 
-# watch mode
-$ yarn run start:dev
+## Deployment
 
-# production mode
-$ yarn run start:prod
-```
+You can deploy this service on hosting platform like Heroku.
 
-## Usage
+## Documentation
 
-1. Start the server: `npm start` or `yarn start`
-2. Use a REST client like Postman or Insomnia to send requests to the server:
-   - Send a `POST` request to `/user/auth/sign-up` with the following JSON payload:
-     ```
-     {
-       "email": "johndoe@example.com",
-       "password": "P@ssw0rd"
-     }
+Find out more on how to use Starton in our [Documentation](https://docs.starton.com/)
 
-     ```
-   - Send a `POST` request to `/user/auth/sign-in` with the same JSON payload
-   - Send a `GET` request to `/user` to get the user data (requires authentication)
-   - Send a `POST` request to `/user/auth/revoke-token` to revoke the JWT token (requires authentication)
+## Contributing
 
-## Test
+Contributions are always welcome!
 
-```bash
-# unit tests
-$ yarn run test
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for ways to get started.
 
-# e2e tests
-$ yarn run test:e2e
-
-# test coverage
-$ yarn run test:cov
-```
-
-## Support
-
-At Starton, our goal is to provide you with excellent support. If you have any concerns or questions regarding this project or any other project, please reach out to us for assistance. Our team of experts is available to help you with any questions or issues you may encounter. We're committed to providing timely and effective support to ensure your success with our products and services.
-
-To contact us, send an email to [support@starton.com](mailto:hello@starton.com) to submit a support request. We'll respond to your inquiry as soon as possible.
-
-Thank you for choosing Starton as your trusted partner for your software development needs.
-
-## Stay in touch
-
-- Author - [Alexandre Schaffner](https://github.com/delicious-mango)
-- Website - [Starton](https://starton.com/)
-- Twitter - [@starton_com](https://twitter.com/starton_com)
+Please adhere to Starton's [Code of Conduct](./CODE_OF_CONDUCT.md).
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+[Apache License 2.0](./LICENSE.md)
+
+## Authors
+
+- Starton [support@starton.com](mailto:support@starton.com)
+- Alexandre Schaffner
