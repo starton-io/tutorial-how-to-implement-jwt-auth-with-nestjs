@@ -1,8 +1,6 @@
 ![Starton Banner](https://github.com/starton-io/.github/blob/master/github-banner.jpg?raw=true)
 
-# Project title
-
-Tutorial - How to implement JWT authentication with NestJS
+# Tutorial - How to implement JWT authentication with NestJS
 
 ## Requirements
 
